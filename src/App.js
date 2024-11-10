@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+function Header() {
+    return (<h1>Simple React Application</h1>);
+  }
+  
+  function Content(props) {
+    return (<p style={{color: props.color}}>{props.text}</p>);
+  }
+  
+  function Footer() {
+    return (<h1>Created by Me, of course.</h1>);
+  }
+  
+  function App() {
+    return (
+      <>
+        <Header />
+        <Content color="magenta" text="This is my first React Application!  (NO IT ISN'T)" />
+        <Content color="darkblue" text="Wish me luck... NO, SKILL AND HARD WORK OVER LUCK" />
+        <Content color="darkgreen" text="I think I've got it! ... WELL, KINDA BUT NOT REALLY?" />
+        <Footer />
+      </>
+    );
+  }
+  
+  export default App;
